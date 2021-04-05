@@ -1,4 +1,6 @@
-data: {  }
+data:
+  focus: 37-47-1
+  alt: Booo
 size: 29834
 last_modified: 1617611076
 width: 480
