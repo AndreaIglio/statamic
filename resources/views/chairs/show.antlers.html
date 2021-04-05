@@ -4,17 +4,45 @@
 <div class="max-w-6xl mx-auto mt-8 flex flex-wrap">
 
     <div class="w-2/3 pr-64">
-       <h1 class="text-4xl font-medium mb-4 text-gray-800">{{title}}</h1>
-       <div class="flex items-center text-md text-gray-700">
+
+        {{# BREADCRUMBS #}}
+
+        <div class="flex mb-4">
+            {{ nav:breadcrumbs }}
+            <div class="{{ is_current ?= "text-blue-600"}}">
+                <a href="{{ url }}">{{ title }}</a>
+                {{ if ! last }}<span class="mx-2">&rarr;</span>{{ /if }}
+            </div>
+            {{ /nav:breadcrumbs }}
+
+        </div>
 
 
-         {{if superchair}}
-         <div class="flex border rounded uppercase font-medium tracking-widest mr-2 text-xs px-1 text-gray-900 w-1/4">
-             Superchair</div>
 
-         {{/if}}
 
-         {{ city }}, {{ country }}
+
+
+
+
+        <div class="flex">
+
+            <div class="flex-1">
+
+                <h1 class="text-4xl font-medium mb-4 text-gray-800 pr-4 leading-tight mb-2">{{title}}</h1>
+                <div class="flex items-center text-md text-gray-700">
+
+                  {{if superchair}}
+                  <div class="flex border rounded uppercase font-medium tracking-widest mr-2 text-xs px-1 text-gray-900 w-1/4">
+                      Superchair</div>
+         
+                  {{/if}}
+         
+                  {{ city }}, {{ country }}
+                 </div>
+            </div>
+            <div class="">
+                 <img src="{{ ovwner:email | gravatar }}" alt="{{ owner:name }}" class="w-12 h-12 rounded-full">
+            </div>
 
       </div>
 
@@ -35,7 +63,6 @@
           </div>
       </div>
             {{ overview }}
-
     </div>
 
 
