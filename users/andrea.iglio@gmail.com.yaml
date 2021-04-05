@@ -1,0 +1,14 @@
+name: Andrea
+super: true
+id: bb0cb73f-03f5-45d4-ba64-9d2d7891f1b9
+password_hash: $2y$10$DgRnS2mP3xQktaQDwfZCjO5uO3q8PBEtd0YscvSfz7b1dsCcaWvSu
+preferences:
+  collections:
+    chairs:
+      columns:
+        - title
+        - photo
+        - price
+        - chair_type
+        - butts
+        - superchair
