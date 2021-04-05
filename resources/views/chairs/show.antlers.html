@@ -1,6 +1,6 @@
 
 
-<img src="{{glide:photo width="1600" height="1000"}}" class="w-6/12 relative border-b" alt="">
+<img src="{{glide:photo width="1600" height="800"}}" class="w-full relative border-b" alt="">
 <div class="max-w-6xl mx-auto mt-8 flex flex-wrap">
 
     <div class="w-2/3 pr-64">
@@ -63,6 +63,27 @@
           </div>
       </div>
             {{ overview }}
+
+        {{if amenities }}
+            <div class="">
+                <h2 class="mb-4 text-xl font-medium mt-10">Amenities</h2>
+
+                <div class="flex flex-wrap">
+
+                    {{ amenities }}
+    
+                        <div class="w-1/2 flex items-center mb-4">
+                        {{ svg :src="icon" class="mr-2 h-6 w-6" }} {{ amenity }}
+                        </div>
+    
+                    {{ /amenities }}
+
+                </div>
+
+            </div>
+
+        {{ /if }}
+
     </div>
 
 
